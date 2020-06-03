@@ -6,8 +6,6 @@ ENV GOVC_Version v0.22.1
 
 COPY kubernetes.repo /etc/yum.repos.d/
 
-#RUN     yum update -y
-
 # Install GO
 RUN     wget --quiet https://dl.google.com/go/go$GO_Version.linux-amd64.tar.gz && \
         tar -C /usr/local -xzf go$GO_Version.linux-amd64.tar.gz && \
@@ -33,4 +31,5 @@ RUN     curl -sL https://rpm.nodesource.com/setup_13.x | bash - && \
 # Install vmw-cli
 RUN     npm install vmw-cli --global
 
-#RUN     yum install -y kubectl
+# Install kubectl
+RUN     yum install -y kubectl
