@@ -1,1 +1,1 @@
-A collection of Docker image builds for use with VMware vRealize Automation Code Stream CI tasks
+A docker image for use with vRealize Automation Code Stream CI tasks and Tanzu Kubernetes Grid.

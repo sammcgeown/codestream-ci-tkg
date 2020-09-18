@@ -25,7 +25,7 @@ RUN     yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest
         yum install jq -y
 
 # Install NPM
-RUN     curl -sL https://rpm.nodesource.com/setup_13.x | bash - && \
+RUN     curl -sL https://rpm.nodesource.com/setup_14.x | bash - && \
         yum install -y nodejs
 
 # Install vmw-cli
