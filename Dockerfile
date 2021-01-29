@@ -3,6 +3,8 @@ LABEL maintainer="smcgeown@vmware.com"
 
 ENV GO_Version 1.15.2
 ENV GOVC_Version v0.23.0
+ENV YQ_VERSION=v4.2.0
+ENV YQ_BINARY=yq_linux_amd64
 
 COPY kubernetes.repo /etc/yum.repos.d/
 
@@ -24,5 +26,5 @@ RUN     wget --quiet https://dl.google.com/go/go$GO_Version.linux-amd64.tar.gz &
         yum install -yq jq nodejs kubectl expect && \
         npm install vmw-cli --global && \
         # Install yq
-        wget https://github.com/mikefarah/yq/releases/download/3.4.0/yq_linux_amd64 -O /usr/bin/yq && \
+        wget https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/${YQ_BINARY} -O /usr/bin/yq && \
         chmod +x /usr/bin/yq
