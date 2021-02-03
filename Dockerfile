@@ -3,7 +3,7 @@ LABEL maintainer="smcgeown@vmware.com"
 
 ENV GO_Version 1.15.2
 ENV GOVC_Version v0.23.0
-ENV YQ_VERSION=v4.2.0
+ENV YQ_VERSION=v4.4.1
 ENV YQ_BINARY=yq_linux_amd64
 
 COPY kubernetes.repo /etc/yum.repos.d/
